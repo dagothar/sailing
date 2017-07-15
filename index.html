@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Elementary Cellular Automata</title>
+
+  <link rel="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+
+</head>
+
+<body>
+  
+  <!-- NAVIGATION -->
+  <div class="header">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<a class="navbar-brand text-center center-block" href="#">Sail!</a>
+			</div>
+		</nav>
+  </div>
+
+  <!-- CONTENTS -->
+  <div class="container-full">
+    <div class="row">
+
+      <!-- LEFT SIDE BAR -->
+      <div class="col-md-2 col-md-offset-1">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Configuration</div>
+
+          <div class="panel-body">
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VIEW -->
+      <div class="col-md-6">
+        <div class="canvas-container" id="view"></div>
+      </div>
+
+
+      <!-- RIGHT SIDE BAR -->
+      <div class="col-md-2">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Controls</div>
+
+          <div class="panel-body">
+
+            <!-- reset button -->
+            <div class="form-group col-md-12">
+              <button type="button" class="button-reset btn btn-default btn-block btn-sm">Reset <span class="glyphicon glyphicon-off"></span></button>
+            </div>
+
+            <!-- start/stop button -->
+            <div class="button-start-div form-group col-md-12">
+              <button type="button" class="button-start btn btn-primary btn-block btn-sm">Start <span class="glyphicon glyphicon-play"></span></button>
+            </div>
+            <div class="button-stop-div form-group col-md-12">
+              <button type="button" class="button-stop btn btn-danger btn-block btn-sm">Stop <span class="glyphicon glyphicon-stop"></span></button>
+            </div>
+
+            <!-- screenshot button-->
+            <div class="form-group col-md-12">
+              <button type="button" class="button-download btn btn-default btn-block btn-sm">Picture <span class="glyphicon glyphicon-download"></span></button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+        <p class="text-muted">&copy; 2017 by Adam Wolniakowski <a href="https://deltastep.blogspot.com">www.deltastep.blogspot.com</a></p>
+        <p class="text-muted">info about this demo: <a href="http://deltastep.blogspot.com">http://deltastep.blogspot.com</a></p>
+    </div>
+  </div>
+
+
+  <!-- SCRIPTS -->
+  <script src="vendor/requirejs/require.js" data-main="scripts/main"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Sailing</title>
+  </head>
+  
+  <body>
+    
+    <canvas id="view" width="640" height="480"></canvas>
+    
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+        
+    <script type="text/javascript">
+      
+      var drawSail = function(ctx, angle) {
+        ctx.save();
+        
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.translate(320, 240);
+        ctx.arc(0, 0, 10, 0, 2*Math.PI);
+        ctx.stroke();
+        
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.rotate(angle);
+        ctx.translate(0, 100);
+        
+        ctx.scale(0.2, 1);
+        ctx.arc(0, 0, 100, -Math.PI/2, Math.PI/2);
+        ctx.stroke();
+        
+        ctx.restore();
+      }
+      
+      
+      $(document).ready(function() {
+        
+        var canvas = $('#view').get(0);
+        var ctx = canvas.getContext('2d');
+        
+        drawSail(ctx, 10.0 * Math.PI / 180);
+                
+      });
+      
+    </script>
+  </body>
+
+</html>
